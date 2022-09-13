@@ -20,6 +20,67 @@
   color: #f58220;
 }
 
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 24.99%;
+}
+
+.col-4 {
+  width: 33.32%;
+}
+
+.col-5 {
+  width: 41.65%;
+}
+
+.col-6 {
+  width: 49.98%;
+}
+
+.col-7 {
+  width: 58.31%;
+}
+
+.col-8 {
+  width: 66.64%;
+}
+
+.col-9 {
+  width: 74.97%;
+}
+
+.col-10 {
+  width: 83.3%;
+}
+
+.col-11 {
+  width: 91.63%;
+}
+
+.col-12 {
+  width: 99.96%;
+}
+
+@media (max-width: 767px) {
+  [class*=col-] {
+    width: 100%;
+  }
+}
+@viewport {
+  width: device-width;
+  zoom: 1;
+}
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -64,11 +125,21 @@ section {
   margin: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   display: flex;
   flex-flow: column;
   margin: 0 auto;
   max-width: 90vw;
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 99%;
+  }
 }
 
 header .container {
@@ -82,12 +153,11 @@ header .container .hero {
   background-position: top center;
   height: 45rem;
   display: flex;
-  padding-bottom: 4rem;
   align-items: flex-end;
   width: 100%;
 }
 header .container .hero h1 {
-  padding: 1 0 0;
+  padding-top: 4rem;
   text-align: center;
   width: 100%;
 }
@@ -109,6 +179,12 @@ header .container .hero h1 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+}
+@media (max-width: 767px) {
+  .vitrine {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
 }
 .vitrine__produto {
   background-color: white;
@@ -180,6 +256,12 @@ footer p a {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
+@media (max-width: 767px) {
+  .steps {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+}
 .steps__produto {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
@@ -187,7 +269,6 @@ footer p a {
   flex-flow: column;
   justify-content: center;
   align-items: flex-start;
-  min-height: 20rem;
   padding: 1rem;
   position: relative;
 }

@@ -10,7 +10,17 @@ $font-size-nav: 1.8rem;
 @import 'fonts';
 @import url('https://fonts.googleapis.com/css2?family=Fruktur&display=swap');
 @import 'nav';
+@import 'grid';
 
+
+@viewport {
+    width: device-width;
+    zoom: 1;
+}
+
+* {
+    box-sizing: border-box;
+}
 
 html {
     font-size: 62.5%;
@@ -58,11 +68,20 @@ section {
     margin: 0;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .container {
     display: flex;
     flex-flow: column;
     margin: 0 auto;
     max-width: 90vw;
+
+    @media (max-width: 768px){
+        max-width: 99%;
+    }
 
 }
 
@@ -73,4 +92,4 @@ section {
 @import 'produtos';
 @import 'footer';
 @import 'steps';
-
+@import 'responsive';
